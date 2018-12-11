@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LfK-QP-Yl6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DukeGardensApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-5G-xhP">
+                                <rect key="frame" x="16" y="84" width="105" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkQ-Ax-ARg" userLabel="About Us">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="About Us">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="17R-4C-eoj" kind="show" id="G0O-Sp-rQ1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkC-Ih-0Ji" userLabel="Species">
+                                        <rect key="frame" x="0.0" y="55" width="69" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Species">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="a5U-YN-nyG" kind="show" id="ofM-pv-3tg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxN-Pb-DCR" userLabel="Contact">
+                                        <rect key="frame" x="0.0" y="110" width="72" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Contact">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="KHh-cH-dSU" kind="show" id="nC3-4s-17q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gNm-a5-h7N"/>
+                                    <constraint firstAttribute="width" constant="105" id="oUE-6e-mna"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDF-lV-B1w">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxr-m8-A2I">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <color key="backgroundColor" red="1" green="0.9577261909" blue="0.99736968459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="2Fg-aU-Chg"/>
+                                        </connections>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.47058823529999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fxr-m8-A2I" firstAttribute="leading" secondItem="uDF-lV-B1w" secondAttribute="leading" id="5HR-hK-4rX"/>
+                                    <constraint firstItem="fxr-m8-A2I" firstAttribute="top" secondItem="uDF-lV-B1w" secondAttribute="top" id="6Hv-Ah-AKi"/>
+                                    <constraint firstAttribute="trailing" secondItem="fxr-m8-A2I" secondAttribute="trailing" id="9hA-hV-q83"/>
+                                    <constraint firstAttribute="bottom" secondItem="fxr-m8-A2I" secondAttribute="bottom" id="JUx-zr-IxB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VqO-jQ-2Er" firstAttribute="bottom" secondItem="uDF-lV-B1w" secondAttribute="bottom" id="DXQ-YO-fOn"/>
+                            <constraint firstItem="YDP-5G-xhP" firstAttribute="top" secondItem="VqO-jQ-2Er" secondAttribute="top" constant="20" id="HtE-My-iBK"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YDP-5G-xhP" secondAttribute="leading" id="Uzr-fr-wb2"/>
+                            <constraint firstItem="uDF-lV-B1w" firstAttribute="top" secondItem="VqO-jQ-2Er" secondAttribute="top" id="j5L-gU-XQh"/>
+                            <constraint firstItem="VqO-jQ-2Er" firstAttribute="trailing" secondItem="uDF-lV-B1w" secondAttribute="trailing" id="kpI-UM-coG"/>
+                            <constraint firstItem="YDP-5G-xhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oG0-aS-aa4"/>
+                            <constraint firstItem="uDF-lV-B1w" firstAttribute="leading" secondItem="VqO-jQ-2Er" secondAttribute="leading" id="ygX-dp-9ms"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VqO-jQ-2Er"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vBS-Mq-DX7">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="2LJ-ua-86Y">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="hamburgerBtnTapped:" destination="BYZ-38-t0r" id="ZFu-Bi-6vi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="leadingC" destination="ygX-dp-9ms" id="9RH-Cb-kr9"/>
+                        <outlet property="mapView" destination="fxr-m8-A2I" id="1pF-2a-DaY"/>
+                        <outlet property="trailingC" destination="kpI-UM-coG" id="AUk-ZC-UMX"/>
+                        <outlet property="ubeView" destination="uDF-lV-B1w" id="OJW-mN-ROp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="BlT-rT-NsU"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="131.78410794602701"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gkB-bR-Q7d">
+            <objects>
+                <viewController id="a5U-YN-nyG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d4W-3F-1tz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Lo4-18-J2q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12p-9y-mka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="916"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ecf-Vb-6Hh">
+            <objects>
+                <viewController id="KHh-cH-dSU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K76-KE-BVq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.3921568627" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Eq9-hu-HbV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7F9-4C-9Qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="915"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vi7-hS-Jbs">
+            <objects>
+                <viewController id="17R-4C-eoj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UfI-rQ-3hh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flower_background" highlightedImage="flower_background" translatesAutoresizingMaskIntoConstraints="NO" id="md9-aQ-rva">
+                                <rect key="frame" x="0.0" y="64" width="387" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kke-vx-MQL">
+                                <rect key="frame" x="16" y="102" width="343" height="545"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91280009389528771" green="0.91280009389528771" blue="0.91280009389528771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">More than 300,000 visitors from all over the world visit Sarah P. Duke Gardens annually, enjoying its 55 acres of specialized gardens in the heart of Duke University. Admission is free, and we are open from 8 a.m. to dusk 365 days a year. Our address is 420 Anderson St., Durham, NC, 27708.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Please see our "visit" page for information about parking, directions, accessibility and other topics. Please see our "rentals" link to plan your meeting or special event at Duke Gardens. We hope you will also consider coming to a class or public event at Duke Gardens. You can learn about opportunities on our education and public programs page. And if you would like to join our volunteers who help in myriad ways at the Gardens, please check out our volunteer page.
+
+Please see our Awards &amp; Honors page to learn more about the world-class horticulture and programs at Duke Gardens.
+
+Duke Gardens receives approximately half of its operating budget from Duke University. The rest comes from people like you, who value all that the Gardens has to offer to the Duke and Triangle community, and to visitors from around the world. We thank you for your appreciation and support. If you're interested in donating to Duke Gardens, please see our Friends of Duke Gardens page.                                                                                         Thank you!</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.9577261909" blue="0.99736968459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="iz6-wl-7sv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1um-aC-xK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="913.49325337331345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J3Z-T1-8Gg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LfK-QP-Yl6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CSX-be-or6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="azO-lZ-h7t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqG-Es-mVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="132"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower_background" width="3280" height="4928"/>
+        <image name="hamburger" width="50" height="50"/>
+    </resources>
+</document>

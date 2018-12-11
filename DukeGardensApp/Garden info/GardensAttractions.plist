@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.003646, -78.933194}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>water</string>
+		<key>location</key>
+		<string>{36.003925, -78.934243}</string>
+		<key>type</key>
+		<string>1</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>restroom</string>
+		<key>location</key>
+		<string>{36.003968, -78.934189}</string>
+		<key>type</key>
+		<string>0</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>water</string>
+		<key>location</key>
+		<string>{36.001555, -78.934822}</string>
+		<key>type</key>
+		<string>1</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>water</string>
+		<key>location</key>
+		<string>{36.003925, -78.934243}</string>
+		<key>type</key>
+		<string>1</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.002040, -78.934539}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>restroom</string>
+		<key>location</key>
+		<string>{36.001321, -78.934321}</string>
+		<key>type</key>
+		<string>0</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.001216, -78.935219}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.001216, -78.935219}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.001216, -78.935219}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>water</string>
+		<key>location</key>
+		<string>{36.001147, -78.932491}</string>
+		<key>type</key>
+		<string>1</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>atm</string>
+		<key>location</key>
+		<string>{36.000929, -78.931158}</string>
+		<key>type</key>
+		<string>3</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>atm</string>
+		<key>location</key>
+		<string>{36.000929, -78.931158}</string>
+		<key>type</key>
+		<string>3</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>help</string>
+		<key>location</key>
+		<string>{36.001705, -78.932149}</string>
+		<key>type</key>
+		<string>2</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>atm</string>
+		<key>location</key>
+		<string>{36.001715, -78.932077}</string>
+		<key>type</key>
+		<string>3</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>water</string>
+		<key>location</key>
+		<string>{36.002005, -78.931557}</string>
+		<key>type</key>
+		<string>1</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>restroom</string>
+		<key>location</key>
+		<string>{36.002005, -78.931557}</string>
+		<key>type</key>
+		<string>0</string>
+		<key>subtitle</key>
+		<string>Intensity: 8/10</string>
+	</dict>
+</array>
+</plist>
