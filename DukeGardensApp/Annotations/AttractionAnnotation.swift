@@ -9,8 +9,8 @@
 import UIKit
 import MapKit
 
-enum AttractionType: Int {
-    case restroom = 0
+enum AttractionType: String {
+    case restroom
     case water
     case help
     case atm

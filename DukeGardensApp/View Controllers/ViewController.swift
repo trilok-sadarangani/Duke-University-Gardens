@@ -9,11 +9,14 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
+
+
 
 class ViewController: UIViewController {
     
+    var ref: DatabaseReference!
     
-  
     let locationManager = CLLocationManager()
     var currentlocation: CLLocationCoordinate2D?
     @IBOutlet weak var mapView: MKMapView!
@@ -23,11 +26,21 @@ class ViewController: UIViewController {
     @IBOutlet var trailingC: NSLayoutConstraint!
     @IBOutlet var ubeView: UIView!
     var hamburgerMenuIsVisible = false
-
+    
+    
+    @IBAction func webButton(_ sender: Any) {
+        if let url = URL(string: "https://ads-web-01.oit.duke.edu/GVT/Register_new.aspx") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLocationServices()
         self.addOverlay()
+        
         self.addAttractionPins()
         
         
@@ -38,9 +51,12 @@ class ViewController: UIViewController {
         let region = MKCoordinateRegion(center: garden.midCoordinate, span: span)
         
         mapView.region = region
-        
         addNavBarImage()
+        
+        
     }
+    
+    
     
     func addNavBarImage() {
         
@@ -52,7 +68,7 @@ class ViewController: UIViewController {
         let bannerHeight = navController.navigationBar.frame.size.height
         
         let bannerX = bannerWidth/2 - image.size.width / 2
-        let bannerY = bannerHeight/2 - image.size.height / 2
+        let bannerY = bannerHeight/2 - image.size.height / 2 * 0.9
         
         imageView.frame = CGRect(x : bannerX, y : bannerY, width: bannerWidth, height: bannerHeight)
         imageView.contentMode = .scaleAspectFit
@@ -60,7 +76,6 @@ class ViewController: UIViewController {
         navigationItem.titleView = imageView
         
     }
-    
     
     @IBAction func hamburgerBtnTapped(_ sender: Any) {
         //if the hamburger menu is NOT visible, then move the ubeView back to where it used to be
@@ -72,7 +87,7 @@ class ViewController: UIViewController {
             //1
             hamburgerMenuIsVisible = true
         } else {
-        //if the hamburger menu IS visible, then move the ubeView back to its original position
+            //if the hamburger menu IS visible, then move the ubeView back to its original position
             leadingC.constant = 0
             trailingC.constant = 0
             
@@ -86,8 +101,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
     
     func configureLocationServices() {
         locationManager.delegate = self
@@ -124,17 +137,42 @@ class ViewController: UIViewController {
         mapView.addOverlay(overlay)
     }
     
+    
+    public struct Annotation : Decodable {
+        let id : String
+        let information: String
+        let latitude: Double
+        let longitude: Double
+        let name: String
+        let type: String
+    }
     func addAttractionPins() {
-        guard let attractions = Garden.plist("GardensAttractions") as? [[String : String]] else { return }
         
-        for attraction in attractions {
-            let coordinate = Garden.parseCoord(dict: attraction, fieldName: "location")
-            let title = attraction["name"] ?? ""
-            let typeRawValue = Int(attraction["type"] ?? "0") ?? 0
-            let type = AttractionType(rawValue: typeRawValue) ?? .restroom
-            let annotation = AttractionAnnotation(coordinate: coordinate, title: title, type: type)
-            mapView.addAnnotation(annotation)
-        }
+        let urlString = "https://compsci-316-215619.firebaseio.com/annotations.json"
+        guard let url = URL(string: urlString) else {return}
+        
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            
+            guard let data = data else {return}
+            
+            do {
+                let decoder = JSONDecoder()
+                let attractions = try decoder.decode([Annotation].self, from: data)
+                
+                for attraction in attractions {
+                    let coordinate =  CLLocationCoordinate2DMake(attraction.latitude, attraction.longitude)
+                    let title = attraction.name
+                    let type = AttractionType(rawValue: attraction.type) ?? .restroom
+                    let annotation = AttractionAnnotation(coordinate: coordinate, title: title, type: type)
+                    self.mapView.addAnnotation(annotation)
+                }
+                
+            } catch let jsonErr {
+                print("Error Serializing Annotation JSON: ", jsonErr)
+            }
+            
+            }.resume()
     }
     
     func addRoute() {
