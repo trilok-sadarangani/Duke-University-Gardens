@@ -1,0 +1,71 @@
+{
+	"id": "0001",
+	"type": "Map Area",
+	"name": "Historic Gardens",
+	"information": "Things you can find in the Historic Gardens include...",
+	"plants": {
+		"plant": [{
+				"id": "1001",
+				"type": "Flower",
+				"species": "Roses",
+				"season": "Year Round",
+				"origin": "United States",
+				"information": "Roses are red",
+				"image": ".jpeg"
+			},
+			{
+				"id": "1002",
+				"type": "Flower",
+				"species": "Violets",
+				"season": "Year Round",
+				"information": "Violets are blue",
+				"image": ".jpeg"
+			},
+			{
+				"id": "1003",
+				"type": "Flower",
+				"species": "Tulips",
+				"season": "Year Round",
+				"information": "Tulips are Dutch",
+				"image": ".jpeg"
+			}
+		]
+	},
+
+	"services": {
+		"services": [{
+				"id": "3001",
+				"type": "Service Point",
+				"name": "Restroom",
+				"location": "Historic Gardens"
+			},
+			{
+				"id": "3002",
+				"type": "Service Point",
+				"name": "Emergency Telephone",
+				"location": "Historic Gardens"
+			}
+		]
+	},
+
+	"annotations": [
+		{
+			"id": "2001",
+			"type": "Structure",
+			"name": "Fisher Amphitheater",
+			"location": "{36.001216, -78.935219}",
+			"information": "Fisher Amphitheater was built in xxx",
+			"image": ".jpeg"
+		},
+		{
+			"id": "2002",
+			"type": "Cafe",
+			"name": "Bartter Family Terrence House / Cafe",
+			"latitude": 36,
+			"longitude": -155,
+			"location": "Historic Gardens",
+			"information": "Seasonal",
+			"image": ".jpeg"
+		}
+	]
+}

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+        <script src="dist/node_modules/jspdf-customfonts/dist/jspdf.customfonts.min.js"></script>
+        <script src="dist/node_modules/jspdf-customfonts/dist/default_vfs.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.4.5/vuefire.min.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>    
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" async></script>
+        <title>Duke Gardens Web Portal</title>
+        <h2></h2>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container" id="formCont">
+                <img src="mainGardenLogo.jpg" class="img-fluid" id="gardenLogo">
+                <h3 class="bloomTitle">New "What's in Bloom"</h3>
+                <div class="newBloom">
+                    <form id="gardenSub">
+                        <div class="form-group">
+                            <label>Date (will be displayed)</label>
+                            <input type="date" class="form-control" placeholder="Enter Date" v-model="date" required>
+                        </div>
+                        <div class="form-group" id="blomq">
+                            <label>BLOMQUIST GARDEN OF NATIVE PLANTS</label>
+                            <small id="textInstr" class="form-text text-muted">
+                                Enter each plant with the form "Scientific name regular name," (ie: Aster tataricus Tatarian aster,
+                                next plant)
+                            </small>
+                            <textarea class="form-control" id="blomqText" rows="3" v-model="blomqT"></textarea>
+                        </div>
+                        <div class="form-group" id="doris">
+                            <label>DORIS DUKE CENTER GARDENS</label>
+                            <textarea class="form-control" id="dorisText" rows="3" v-model="dorisT"></textarea>
+                        </div>
+                        <div class="form-group" id="culb">
+                            <label>CULBERSON ASIATIC ARBORETUM</label>
+                            <textarea class="form-control" id="culbText" rows="3" v-model="culbT"></textarea>
+                        </div>
+                        <div class="form-group" id="historic">
+                            <label>HISTORIC GARDENS</label>
+                            <textarea class="form-control" id="historicText" rows="3" v-model="historicT"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" v-on:click="submitNewEntry()">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

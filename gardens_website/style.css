@@ -1,0 +1,17 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#formCont {
+    margin-bottom: 30px;
+}
+
+#gardenLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 330.75px;
+}
